@@ -1,0 +1,664 @@
+:root {
+    --background-color: rgb(222, 222, 222);
+    --primary-theme-colour: rgb(93, 154, 31);
+    --secondary-theme-colour: rgb(90, 41, 112);
+    --content-background-color: rgb(255, 255, 255);
+    --article-background-colour: rgb(150, 118, 164);
+}
+
+
+/*fallback code for older browsers*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: rgb(93, 154, 31);
+    color: var(--primary-theme-colour);
+}
+
+a:hover {
+    color: rgb(90, 41, 112);
+    color: var(--secondary-theme-colour);
+}
+
+.main-button {
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px 15px;
+    background-color: rgb(93, 154, 31);
+    background-color: var(--primary-theme-colour);
+    color: black;
+    text-transform: none;
+}
+
+.main-button:hover {
+    background-color: rgb(90, 41, 112);
+    background-color: var(--secondary-theme-colour);
+    color: white;
+}
+
+form {
+    display: block;
+    padding: 10px;
+}
+
+form ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+form li {
+    margin: 5px auto;
+    padding: 5px;
+    height: 100%;
+}
+
+form label {
+    float: left;
+}
+
+form input, textarea, select{
+    clear: both;
+    width: 100%;
+}
+
+textarea {
+    float: left;
+    height: 100px;
+    resize: none;
+}
+
+input[type=submit] {
+    float: right;
+    clear: both;
+    width: auto;
+    cursor: pointer;
+}
+
+
+/* Layout */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.home-wrapper {
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    background-color: var(--content-background-color);
+}
+
+.register-wrapper {
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    background-color: var(--content-background-color);
+}
+
+.conf-wrapper {
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    background-color: var(--content-background-color);
+}
+
+.confInfo-wrapper {
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    background-color: var(--content-background-color);
+}
+
+.contact-wrapper {
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    background-color: var(--content-background-color);
+}
+
+.error-wrapper {
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    background-color: var(--content-background-color);
+}
+
+
+/* HEADER */
+.main-header {
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(90, 41, 112);
+    border-bottom: 2px solid var(--secondary-theme-colour);
+    padding: 5px;
+    height: 100px;
+}
+
+.logo {
+    margin: 0 auto;
+    width: 142px;
+    background-color: white;
+}
+
+nav {
+    float: right;
+    width: 100%;
+}
+
+nav ul {
+    overflow: hidden;
+    height: 0;
+}
+
+nav ul.open {
+    height: auto;
+}
+
+nav ul li {
+    display: block;
+    float: none;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 8px;
+    width: 100%;
+    background-color: rgb(93, 154, 31);
+    background-color: var(--primary-theme-colour);
+}
+
+nav ul li:hover {
+    background-color: rgb(90, 41, 112);
+    background-color: var(--secondary-theme-colour);
+}
+
+nav ul li.current {
+    background-color: rgb(90, 41, 112);
+    background-color: var(--secondary-theme-colour);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.burger-nav {
+    display: block;
+    height: 40px;
+    width: 100%;
+    background: url(../images/icons/menu_lines.png) no-repeat 98% center;
+    cursor: pointer;
+}
+
+/** HOMEPAGE **/
+
+/* NOTICE */
+.featured {
+    border: 5px solid rgb(93, 154, 31);
+    border: 5px solid var(--primary-theme-colour);
+    text-align: center;
+}
+
+.featured img {
+    display: block;
+}
+
+
+.notice {
+    border: 5px solid rgb(93, 154, 31);
+    border: 5px solid var(--primary-theme-colour);
+    padding: 10px;
+    text-align: center;
+}
+
+/* CARDS */
+.card {
+    margin: 20px 0;
+    text-align: center;
+    border: 3px solid rgb(150, 118, 164);
+    border: 3px solid var(--article-background-colour);
+    padding: 10px;
+}
+
+/** REGISTER **/
+.register-form {
+    border: 3px solid rgb(150, 118, 164);
+    border: 3px solid var(--article-background-colour);
+    padding-bottom: 100px;
+}
+
+.register-form li {
+    width: 90%;
+}
+
+/** CONFERENCES **/
+.conference {
+    margin: 10px;
+    padding: 5px;
+    padding-bottom: 10px;
+    background-color: rgb(150, 118, 164);
+    background-color: var(--article-background-colour);
+    text-align: center;
+}
+
+.year {
+    position: absolute;
+    padding: 10px;
+    background: var(--primary-theme-colour);
+    opacity: 0.7;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.confimg {
+    width: 100%;
+    height: auto;
+}
+
+/** Indivdual Conference Page **/
+.conf-item {
+    margin: 10px auto;
+    border: 3px solid rgb(150, 118, 164);
+    border: 3px solid var(--article-background-colour);
+    padding: 5px;
+    padding-bottom: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+#conf-speaker {
+    height: 250px;
+}
+
+audio {
+    width: 100%;
+    max-width: 400px;
+}
+
+
+/** CONTACT **/
+.contact-form {
+    margin: 5px 0;
+    border: 3px solid rgb(150, 118, 164);
+    border: 3px solid var(--article-background-colour);
+    padding: 10px;
+    height: 300px;
+}
+
+.contact-details {
+    margin: 5px 0;
+    border: 3px solid rgb(150, 118, 164);
+    border: 3px solid var(--article-background-colour);
+    padding: 10px;
+    text-align: center;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+/* FOOTER */
+.main-footer {
+    margin-top: 10px;
+    border-top: 2px solid rgb(90, 41, 112);
+    border-top: 2px solid var(--secondary-theme-colour);
+    padding: 5px 2px 0px 2px;
+    height: 10px;
+    font-size: 10px;
+}
+
+.copyright {
+    float: left;
+}
+
+.author {
+    float: right;
+}
+
+/** ERROR PAGES **/
+.error {
+    text-align: center;
+}
+
+
+/* DESKTOP */
+@media screen and (min-width: 730px) {
+    /* Layout */
+    body {
+        background-color: rgb(222, 222, 222);
+        background-color: var(--background-color);
+    }
+
+    .home-wrapper {
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .register-wrapper {
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .conf-wrapper {
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .confInfo-wrapper {
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .contact-wrapper {
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .error-wrapper {
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    /* HEADER */
+    .main-header {
+        height: 60px;
+    }
+
+    .logo {
+        float: left;
+    }
+
+    .burger-nav {
+        display: none;
+    }
+
+    nav {
+        width: auto;
+    }
+
+    nav ul {
+        height: auto;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 22px 20px 0px 20px;
+        border-bottom: 3px solid rgb(93, 154, 31);
+        border-bottom: 3px solid var(--primary-theme-colour);
+        padding-bottom: 6px;
+        width: auto;
+        background: none
+    }
+
+    nav ul li:hover {
+        background: none;
+        border-bottom: 3px solid rgb(90, 41, 112);
+        border-bottom: 3px solid var(--secondary-theme-colour);
+    }
+
+    nav ul li.current {
+        background: none;
+        border-bottom: 3px solid rgb(90, 41, 112);
+        border-bottom: 3px solid var(--secondary-theme-colour);
+    }
+
+    nav a {
+        color: rgb(90, 41, 112);
+        color: var(--secondary-theme-colour);
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: rgb(136, 215, 83);
+        color: var(--primary-theme-colour);
+    }
+
+    /** HOMEPAGE **/
+    /* NOTICE */
+    .featured {
+        margin: 0 100px;
+        padding: 5px;
+        -webkit-transition: border-color 0.5s;
+    }
+
+    .featured:hover {
+        border-color: var(--secondary-theme-colour);
+    }
+
+    .featured img {
+        -webkit-transition: filter 0.5s;
+    }
+
+    .featured img:hover {
+        filter: brightness(80%);
+    }
+
+    .notice {
+        margin: 0 100px;
+    }
+
+    /**REGISTER **/
+    .register-form li {
+        width: 90%;
+    }
+
+    /** CONFERENCES **/
+    .conference {
+        margin: 5px auto;
+        width: 620px;
+    }
+}
+
+/*
+
+    For browsers that support grid
+
+*/
+@supports (display: grid) {
+    /* Layout */
+    .home-wrapper {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto 30px;
+        grid-template-areas:
+        "header"
+        "featured"
+        "card1"
+        "card2"
+        "card3"
+        "footer";
+        grid-gap: 5px;
+    }
+
+    .register-wrapper {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto 30px;
+        grid-template-areas:
+        "header"
+        "notice"
+        "register"
+        "footer";
+        grid-gap: 5px;
+    }
+
+    .conf-wrapper {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto 30px;
+        grid-template-areas:
+        "header"
+        "conf18"
+        "conf17"
+        "conf16"
+        "conf15"
+        "footer";
+        grid-gap: 5px;
+    }
+
+    .confInfo-wrapper {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto auto 30px;
+        grid-template-areas:
+        "header"
+        "description"
+        "details"
+        "speaker"
+        "program"
+        "footer";
+        grid-gap: 5px;
+    }
+
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto 30px;
+        grid-template-areas:
+        "header"
+        "notice"
+        "contact"
+        "contact-form"
+        "footer";
+        grid-gap: 5px;
+    }
+
+    .error-wrapper {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto 30px;
+        grid-template-areas:
+        "header"
+        "error"
+        "footer";
+        grid-gap: 5px;
+    }
+
+    /* HEADER */
+    .main-header {
+        grid-area: header;
+        height: auto;
+    }
+
+    /** HOMEPAGE **/
+    /* NOTICE */
+    .featured {grid-area: featured;}
+    .notice {grid-area: notice;}
+
+    /* CARDS */
+    #card1 {grid-area: card1;}
+    #card2 {grid-area: card2;}
+    #card3 {grid-area: card3;}
+
+    /** REGISTER **/
+    .register-form {
+        grid-area: register;
+        padding-bottom: 0;
+    }
+
+    /** CONFERENCES **/
+    #C18 {grid-area: conf18;}
+    #C17 {grid-area: conf17;}
+    #C16 {grid-area: conf16;}
+    #C15 {grid-area: conf15;}
+
+    /** Indivdual Conference Page **/
+    #conf-desc {grid-area: description;}
+    #conf-details {grid-area: details;}
+    #conf-speaker {
+        grid-area: speaker;
+        height: auto;
+    }
+    #conf-program {grid-area: program;}
+
+    /** CONTACT **/
+    .contact-form {grid-area: contact-form;}
+    .contact-details {grid-area: contact;}
+
+    /* FOOTER */
+    .main-footer {grid-area: footer;}
+
+    /** ERROR PAGES **/
+    .error {grid-area: error;}
+
+    /* DESKTOP */
+    @media screen and (min-width: 730px) {
+        /* PAGE LAYOUTS */
+        .home-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 80px auto auto 30px;
+            grid-template-areas:
+            "header header header"
+            "featured featured featured"
+            "card1 card2 card3"
+            "footer footer footer";
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+
+        .register-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 80px auto auto 30px;
+            grid-template-areas:
+            "header"
+            "notice"
+            "register"
+            "footer";
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+
+        .conf-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 80px auto auto auto auto 30px;
+            grid-template-areas:
+            "header"
+            "conf18"
+            "conf17"
+            "conf16"
+            "conf15"
+            "footer";
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+
+        .confInfo-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 80px auto auto auto auto 30px;
+            grid-template-areas:
+            "header"
+            "description"
+            "details"
+            "speaker"
+            "program"
+            "footer";
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 80px auto auto 30px;
+            grid-template-areas:
+            "header header"
+            "notice notice"
+            "contact-form contact"
+            "footer footer";
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+
+        .error-wrapper {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 80px auto 30px;
+            grid-template-areas:
+            "header"
+            "error"
+            "footer";
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+    }
+}

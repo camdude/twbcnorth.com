@@ -1,0 +1,546 @@
+
+:root {
+    --background-color: rgb(222, 222, 222);
+    --primary-theme-colour: rgb(37, 102, 112);
+    --secondary-theme-colour: rgb(102, 102, 102);
+    --content-background-color: rgb(255, 255, 255);
+    --article-background-colour: rgb(191, 191, 191);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: rgb(37, 102, 112);
+    color: var(--primary-theme-colour);
+}
+
+.main-button {
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px 15px;
+    background-color: rgb(37, 102, 112);
+    background-color: var(--primary-theme-colour);
+    color: white;
+    text-transform: none;
+}
+
+.main-button:hover {
+    background-color: rgb(102, 102, 102);
+    background-color: var(--secondary-theme-colour);
+    color: black;
+}
+
+form {
+    display: block;
+    padding: 10px;
+}
+
+form ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+form li {
+    margin: 5px auto;
+    padding: 5px;
+    height: 100%;
+}
+
+form label {
+    float: left;
+}
+
+form input, textarea, select{
+    clear: both;
+    width: 100%;
+}
+
+textarea {
+    float: left;
+    height: 100px;
+    resize: none;
+}
+
+input[type=submit] {
+    float: right;
+    clear: both;
+    width: auto;
+    cursor: pointer;
+}
+
+
+/* Layout */
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* PAGE LAYOUTS */
+.home-wrapper {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto 30px;
+    grid-template-areas:
+    "header"
+    "notice"
+    "card1"
+    "card2"
+    "card3"
+    "footer";
+    grid-gap: 5px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    background-color: var(--content-background-color);
+}
+
+.register-wrapper {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 30px;
+    grid-template-areas:
+    "header"
+    "register"
+    "footer";
+    grid-gap: 5px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    background-color: var(--content-background-color);
+}
+
+.conf-wrapper {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto 30px;
+    grid-template-areas:
+    "header"
+    "conf17"
+    "conf16"
+    "conf15"
+    "footer";
+    grid-gap: 5px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    background-color: var(--content-background-color);
+}
+
+.confInfo-wrapper {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto auto auto 30px;
+    grid-template-areas:
+    "header"
+    "description"
+    "details"
+    "speaker"
+    "program"
+    "footer";
+
+    grid-gap: 5px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    background-color: var(--content-background-color);
+}
+
+.contact-wrapper {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto 30px;
+    grid-template-areas:
+    "header"
+    "contact"
+    "contact-form"
+    "footer";
+    grid-gap: 5px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    background-color: var(--content-background-color);
+}
+
+.error-wrapper {
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto 30px;
+    grid-template-areas:
+    "header"
+    "error"
+    "footer";
+    grid-gap: 5px;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    background-color: var(--content-background-color);
+}
+
+/* HEADER */
+.main-header {
+    grid-area: header;
+    margin-bottom: 10px;
+    border-bottom: 1px solid rgb(222, 222, 222);
+    border-bottom: 1px solid var(--background-color);
+    padding: 5px;
+    height: 100px;
+}
+
+.logo {
+    margin: 0 auto;
+    width: 142px;
+    background-color: white;
+}
+
+nav {
+    float: right;
+    width: 100%;
+}
+
+nav ul {
+    overflow: hidden;
+    height: 0;
+}
+
+nav ul.open {
+    height: auto;
+}
+
+nav ul li {
+    display: block;
+    float: none;
+    text-align: center;
+    border-bottom: 1px solid black;
+    padding: 8px;
+    width: 100%;
+    background-color: rgb(37, 102, 112);
+    background-color: var(--primary-theme-colour);
+}
+
+nav ul li:hover {
+    background-color: rgb(102, 102, 102);
+    background-color: var(--secondary-theme-colour);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.burger-nav {
+    display: block;
+    height: 40px;
+    width: 100%;
+    background: url(../images/icons/menu_lines.png) no-repeat 98% center;
+    cursor: pointer;
+}
+
+/** HOMEPAGE **/
+
+/* NOTICE */
+.notice {
+    grid-area: notice;
+    clear: both; //support for non-grid
+    border: 5px solid rgb(37, 102, 112);
+    border: 5px solid var(--primary-theme-colour);
+    padding: 10px;
+    text-align: center;
+}
+
+/* CARDS */
+.card {
+    margin: 20px 0;
+    text-align: center;
+    border: 3px solid lightgrey;
+    padding: 10px;
+}
+
+#card1 {
+    grid-area: card1;
+}
+
+#card2 {
+    grid-area: card2;
+}
+
+#card3 {
+    grid-area: card3;
+}
+
+/** REGISTER **/
+.register-form {
+    grid-area: register;
+    clear: both; //support for non-grid
+    border: 3px solid lightgrey;
+}
+
+.register-form li {
+    width: 90%;
+}
+
+
+/** CONFERENCES **/
+.conference {
+    margin: 10px;
+    padding: 5px;
+    padding-bottom: 10px;
+    background-color: rgb(191, 191, 191);
+    background-color: var(--article-background-colour);
+    text-align: center;
+}
+
+.confimg {
+    width: 100%;
+    height: auto;
+}
+
+#C17 {
+    grid-area: conf17;
+    clear: both; //support for non-grid
+}
+
+#C16 {
+    grid-area: conf16;
+}
+
+#C15 {
+    grid-area: conf15;
+}
+
+/* Indivdual Conference Page*/
+.conf-item {
+    margin: 10px auto;
+    border: 3px solid lightgrey;
+    padding: 5px;
+    padding-bottom: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+#conf-desc {
+    grid-area: description;
+}
+
+#conf-details {
+    grid-area: details;
+}
+
+#conf-speaker {
+    grid-area: speaker;
+}
+
+#conf-program {
+    grid-area: program;
+}
+
+audio {
+    width: 100%;
+    max-width: 400px;
+}
+
+/** CONTACT **/
+.contact-form {
+    grid-area: contact-form;
+    clear: both; //support for non-grid
+    border: 3px solid lightgrey;
+}
+
+.contact-details {
+    grid-area: contact;
+    margin: auto 0;
+    border: 3px solid lightgrey;
+    padding: 10px;
+    text-align: center;
+}
+
+/* FOOTER */
+.main-footer {
+    grid-area: footer;
+    margin-top: 10px;
+    border-top: 1px solid black;
+    padding: 5px 2px 0px 2px;
+    height: 10px;
+    font-size: 10px;
+}
+
+.copyright {
+    float: left;
+}
+
+.author {
+    float: right;
+}
+
+/** ERROR PAGES **/
+.error {
+    grid-area: error;
+    text-align: center;
+}
+
+/* DESKTOP */
+@media screen and (min-width: 710px) {
+    body {
+        background-color: rgb(222, 222, 222);
+        background-color: var(--background-color);
+    }
+
+    .main-header {
+        height: 60px;
+    }
+
+    /* PAGE LAYOUTS */
+    .home-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 80px auto auto 30px;
+        grid-template-areas:
+        "header header header"
+        "notice notice notice"
+        "card1 card2 card3"
+        "footer footer footer";
+
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .register-wrapper {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 80px auto 30px;
+        grid-template-areas:
+        "header"
+        "register"
+        "footer";
+
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .conf-wrapper {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px auto auto auto 30px;
+        grid-template-areas:
+        "header header"
+        "conf17 conf17"
+        "conf16 conf16"
+        "conf15 conf15"
+        "footer footer";
+        grid-gap: 5px;
+
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .confInfo-wrapper {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px auto auto auto auto 30px;
+        grid-template-areas:
+        "header header"
+        "description description"
+        "details details"
+        "speaker speaker"
+        "program program"
+        "footer footer";
+        grid-gap: 5px;
+
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .contact-wrapper {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px auto 30px;
+        grid-template-areas:
+        "header header"
+        "contact-form contact"
+        "footer footer";
+        grid-gap: 5px;
+
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    .error-wrapper {
+        grid-area: content;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px auto 30px;
+        grid-template-areas:
+        "header header"
+        "error error"
+        "footer footer";
+        grid-gap: 5px;
+
+        margin: 0 auto;
+        max-width: 1000px;
+    }
+
+    /* HEADER */
+    .logo {
+        float: left;
+    }
+
+    .burger-nav {
+        display: none;
+    }
+
+    nav {
+        width: auto;
+    }
+
+    nav ul {
+        height: auto;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin: 22px 20px 0px 20px;
+        padding-bottom: 6px;
+        width: auto;
+        background: none
+    }
+
+    nav ul li:hover {
+        background: none;
+        border-bottom: 3px solid rgb(37, 102, 112);
+        border-bottom: 3px solid var(--primary-theme-colour);
+    }
+
+    nav a {
+        color: black;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: rgb(37, 102, 112);
+        color: var(--primary-theme-colour);
+    }
+
+    /** HOMEPAGE **/
+    /* NOTICE */
+    .notice {
+        margin: 0 100px;
+    }
+    /** REGISTER **/
+    .register-form li {
+        width: 50%;
+    }
+
+    /** CONFERENCES **/
+    .conference {
+        margin: 5px auto;
+        width: 620px;
+    }
+}
