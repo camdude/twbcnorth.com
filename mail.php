@@ -7,8 +7,8 @@
         require_once "Mail.php";
         $host = "email-smtp.us-west-2.amazonaws.com";
         $port = "587";
-        $username = "AKIAIEDWXXQYYUHD5VTQ";
-        $password = "BIm8pnta+3ojL7wRMHy1gglefJhhzZYlK969eCelJFnD";
+        $username = "";
+        $password = "";
 
         $headers = array (
             'From' => $from,
